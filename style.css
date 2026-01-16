@@ -136,6 +136,10 @@ a:hover {
   color: var(--neon-cyan);
 }
 
+.neon-glow:hover {
+  box-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+}
+
 /* --- Hero Section --- */
 .hero-section {
   position: relative;
@@ -164,7 +168,10 @@ a:hover {
 .glitch-text {
   font-size: 4rem;
   position: relative;
-  color: var(--text-bright);
+  background: linear-gradient(to right, var(--neon-cyan), var(--neon-purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .glitch-text::before,
@@ -214,21 +221,20 @@ a:hover {
 .cta-button {
   display: inline-block;
   padding: 1rem 2.5rem;
-  background: var(--neon-cyan);
-  color: var(--bg-deep);
+  background: transparent;
+  border: 2px solid var(--neon-cyan);
+  color: var(--neon-cyan);
   font-family: var(--font-heading);
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2px;
-  clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-  transform: translateY(-2px);
+  background: var(--neon-cyan);
+  color: #000;
   box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
-  text-shadow: none;
-  color: var(--bg-deep);
 }
 
 .cta-button.secondary {
@@ -273,7 +279,7 @@ a:hover {
 }
 
 .product-card:hover {
-  border-color: var(--neon-cyan);
+  border-color: var(--neon-purple);
   transform: translateY(-5px);
 }
 
