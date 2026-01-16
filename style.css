@@ -388,3 +388,75 @@ a:hover {
 .footer-column a:hover {
   color: var(--neon-cyan);
 }
+
+/* =========================================
+   WooCommerce Integration
+   ========================================= */
+
+/* Global Shop */
+.woocommerce-page {
+  background-color: var(--bg-deep);
+  color: var(--text-bright);
+}
+
+/* Buttons (Match Hero Button) */
+.woocommerce button.button,
+.woocommerce a.button,
+.woocommerce .product_type_simple,
+.woocommerce .product_type_variable,
+.woocommerce .product_type_grouped,
+.woocommerce .product_type_external,
+.woocommerce .button.add_to_cart_button {
+  background: transparent !important;
+  border: 2px solid var(--neon-cyan) !important;
+  color: var(--neon-cyan) !important;
+  font-family: var(--font-heading);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border-radius: 0;
+  padding: 0.75rem 1.5rem;
+}
+
+.woocommerce button.button:hover,
+.woocommerce a.button:hover,
+.woocommerce .button.add_to_cart_button:hover {
+  background: var(--neon-cyan) !important;
+  color: #000 !important;
+  box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+}
+
+/* Inputs (Search & Quantity) */
+.woocommerce input[type="text"],
+.woocommerce input[type="search"],
+.woocommerce input[type="number"],
+.woocommerce input[type="email"],
+.woocommerce input[type="password"],
+.woocommerce input[type="tel"] {
+  background: var(--bg-panel) !important;
+  color: var(--text-bright) !important;
+  border: none !important;
+  border-bottom: 2px solid var(--glass-border) !important;
+  padding: 0.5rem;
+}
+
+.woocommerce input:focus {
+  border-bottom-color: var(--neon-cyan) !important;
+  outline: none;
+}
+
+/* Price */
+.woocommerce div.product p.price,
+.woocommerce div.product span.price,
+.woocommerce ul.products li.product .price {
+  color: var(--neon-cyan) !important;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.woocommerce ul.products li.product .price del {
+  color: var(--text-dim) !important;
+  opacity: 0.6;
+}
+
